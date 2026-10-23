@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e3a8a"/></linearGradient></defs>
+<rect width="800" height="600" fill="url(#g)"/>
+<rect x="8" y="8" width="784" height="584" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" rx="14"/>
+<text x="50%" y="47%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="57" font-weight="bold" fill="#ffffff">SERTIFIKAT 1</text>
+<text x="50%" y="60%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="31" fill="rgba(255,255,255,0.85)">timpa gambar sertifikat</text>
+</svg>

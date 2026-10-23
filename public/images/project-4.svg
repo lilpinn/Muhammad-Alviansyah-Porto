@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#111827"/></linearGradient></defs>
+<rect width="960" height="540" fill="url(#g)"/>
+<rect x="8" y="8" width="944" height="524" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2" rx="14"/>
+<text x="50%" y="47%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="69" font-weight="bold" fill="#ffffff">PROYEK 4</text>
+<text x="50%" y="60%" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="37" fill="rgba(255,255,255,0.85)">timpa thumbnail proyek</text>
+</svg>
