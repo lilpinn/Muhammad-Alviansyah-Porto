@@ -253,89 +253,20 @@ export const certificates: Certificate[] = [
 // ============================================================
 export const projects: Project[] = [
   {
-    title: "E-Commerce Dashboard",
+    title: "Website Portofolio",
     description:
-      "Dashboard analitik penjualan real-time dengan grafik interaktif.",
+      "Website portofolio full-stack-ready dengan dark mode, animasi, dan deploy gratis di GitHub Pages.",
     detail:
-      "Aplikasi dashboard untuk memantau penjualan, inventori, dan perilaku pelanggan. " +
-      "Dibangun dengan Next.js App Router, Chart.js, dan REST API Node.js. Fitur utama: " +
-      "filter data real-time, ekspor laporan, autentikasi multi-role, dan dark mode.",
+      "Website portofolio ini sendiri. Dibangun dengan Next.js (App Router), TypeScript, dan Tailwind CSS, " +
+      "lalu di-static-export untuk hosting gratis di GitHub Pages lewat GitHub Actions. " +
+      "Fitur: dark/light mode, typing effect, scroll-spy navbar, filter sertifikat & proyek dengan modal, " +
+      "timeline pengalaman, form kontak Web3Forms, toast notification, serta optimasi SEO (Open Graph, sitemap-ready).",
     category: "Web App",
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind",
-      "Node.js",
-      "PostgreSQL",
-    ],
-    image: "/images/project-1.svg",
-    githubUrl: "https://github.com/usernameanda/ecommerce-dashboard",
-    liveUrl: "https://demo-anda.vercel.app",
-    featured: true,
-  },
-  {
-    title: "Aplikasi Catatan Pintar",
-    description: "Catatan dengan AI summary dan pencarian semantik.",
-    detail:
-      "Aplikasi catatan yang meng-auto-ringkas isi catatan panjang memakai API AI, " +
-      "lengkap dengan tag, pencarian, dan sinkronisasi antar perangkat.",
-    category: "Web App",
-    technologies: ["React", "Express", "MongoDB", "OpenAI API"],
-    image: "/images/project-2.svg",
-    githubUrl: "https://github.com/usernameanda/smart-notes",
-    liveUrl: "",
-    featured: true,
-  },
-  {
-    title: "API Service Platform",
-    description: "REST API multi-tenant dengan dokumentasi OpenAPI.",
-    detail:
-      "Platform penyedia API multi-tenant dengan rate limiting, API key management, " +
-      "dan dokumentasi otomatis via Swagger/OpenAPI.",
-    category: "API",
-    technologies: ["Node.js", "Fastify", "Redis", "Docker"],
-    image: "/images/project-3.svg",
-    githubUrl: "https://github.com/usernameanda/api-platform",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    title: "Portofolio Interaktif",
-    description: "Website portofolio dengan animasi modern dan dark mode.",
-    detail:
-      "Website portofolio ini sendiri — statis, cepat, SEO-friendly, dan ter-deploy gratis di GitHub Pages.",
-    category: "Web App",
-    technologies: ["Next.js", "TypeScript", "Tailwind"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GitHub Actions"],
     image: "/images/project-4.svg",
-    githubUrl: "https://github.com/usernameanda/portofolio",
-    liveUrl: "https://usernameanda.github.io",
-    featured: false,
-  },
-  {
-    title: "Task Management CLI",
-    description: "Manajemen tugas dari terminal dengan penyimpanan lokal.",
-    detail:
-      "CLI produktivitas untuk mengelola task: tambah, edit, filter, dan statistik harian. " +
-      "Tersimpan di file JSON lokal.",
-    category: "Tools",
-    technologies: ["Python", "Click", "Rich"],
-    image: "/images/project-5.svg",
-    githubUrl: "https://github.com/usernameanda/task-cli",
-    liveUrl: "",
-    featured: false,
-  },
-  {
-    title: "Sistem Presensi Sekolah",
-    description: "Presensi siswa berbasis QR code + dashboard guru.",
-    detail:
-      "Sistem presensi untuk sekolah: siswa scan QR, guru melihat rekap kehadiran real-time, " +
-      "wali murid dapat notifikasi otomatis.",
-    category: "Mobile",
-    technologies: ["Flutter", "Firebase", "Node.js"],
-    image: "/images/project-6.svg",
-    githubUrl: "https://github.com/usernameanda/presensi",
-    liveUrl: "",
-    featured: false,
+    githubUrl: "https://github.com/lilpinn/Muhammad-Alviansyah-Porto",
+    liveUrl: "https://lilpinn.github.io/Muhammad-Alviansyah-Porto",
+    featured: true,
   },
 ];
 
