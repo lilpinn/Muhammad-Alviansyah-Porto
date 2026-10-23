@@ -46,7 +46,7 @@ export default function Navbar() {
       <nav
         aria-label="Navigasi utama"
         className={`mx-auto flex max-w-6xl items-center justify-between gap-4 rounded-2xl px-4 py-2.5 transition-all sm:px-6 ${
-          scrolled ? 'glass mx-3 shadow-lg sm:mx-auto' : ''
+          scrolled ? 'glass backdrop-blur-[14px] mx-3 shadow-lg sm:mx-auto' : ''
         }`}
       >
         <a href="#beranda" className="text-lg font-bold tracking-tight">

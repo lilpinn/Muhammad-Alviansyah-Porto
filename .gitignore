@@ -18,6 +18,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+buildlog.txt
+serve.log
 
 # env files
 .env*

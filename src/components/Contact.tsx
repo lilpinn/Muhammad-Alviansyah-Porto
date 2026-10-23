@@ -105,8 +105,8 @@ export default function Contact() {
     <section id="kontak" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          id="kontak-heading"
-          eyebrow="Kontak"
+
+
           title="Hubungi Saya"
           description="Punya ide proyek atau peluang kerja? Kirim pesan, saya balas secepatnya."
         />

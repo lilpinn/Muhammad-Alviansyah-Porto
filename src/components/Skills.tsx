@@ -27,8 +27,8 @@ export default function Skills() {
     <section id="skill" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          id="skill-heading"
-          eyebrow="Kemampuan"
+
+
           title="Skills & Teknologi"
           description="Teknologi yang saya kuasai beserta perkiraan level penguasaan."
         />
@@ -54,7 +54,7 @@ export default function Skills() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((s, i) => (
             <Reveal key={s.name} delay={(i % 3) * 70}>
-              <div className="lift glass h-full rounded-2xl p-5">
+              <div className="lift glass glow-border h-full rounded-2xl p-5">
                 <div className="mb-2 flex items-center justify-between gap-2">
                   <h3 className="font-semibold">{s.name}</h3>
                   <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${CAT_COLOR[s.category]}`}>

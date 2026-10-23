@@ -79,7 +79,45 @@ export function SocialIcon({
 }) {
   const Brand = BRANDS[name];
   if (Brand) return <Brand size={size} className={className} />;
-  // Fallback ikon generik untuk nama selain brand
+  if (name === 'Mail') {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className={className}
+      >
+        <rect width="20" height="16" x="2" y="4" rx="2" />
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+      </svg>
+    );
+  }
+  if (name === 'Globe') {
+    return (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className={className}
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+        <path d="M2 12h20" />
+      </svg>
+    );
+  }
   return (
     <Svg size={size} className={className}>
       <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 2c1.7 0 3.26.53 4.55 1.43L14 10h6a8 8 0 0 0-6.55-5.97M8.55 5.44A7.97 7.97 0 0 0 4.26 10H8a12 12 0 0 1 1.55-3.16zM4.26 14A7.97 7.97 0 0 0 8.55 18.56 12 12 0 0 1 7 14zm4.29 0H4.26a8 8 0 0 0 6.55 5.97L14 14zm1.16 0-1.16 4.2A8 8 0 0 0 19.74 14zm1.74-2h4.26a8 8 0 0 0-6.55-5.97L14 10zm0-4 1.16-4.2A8 8 0 0 0 12.75 10z" />

@@ -18,7 +18,7 @@
   --accent: #ea580c;
   --accent-foreground: #ffffff;
   --ring: #2563eb;
-  --glass: rgba(255, 255, 255, 0.72);
+  --glass: rgba(255, 255, 255, 0.88);
   --glass-border: rgba(255, 255, 255, 0.35);
 }
 
@@ -35,7 +35,7 @@
   --accent: #fb923c;
   --accent-foreground: #0b1220;
   --ring: #3b82f6;
-  --glass: rgba(15, 23, 42, 0.72);
+  --glass: rgba(15, 23, 42, 0.86);
   --glass-border: rgba(148, 163, 184, 0.18);
 }
 
@@ -94,8 +94,8 @@ body {
    ============================================================ */
 .glass {
   background: var(--glass);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
   border: 1px solid var(--glass-border);
 }
 
@@ -152,18 +152,181 @@ body {
   animation: float 4s ease-in-out infinite;
 }
 
-/* Gradient text headline */
-.text-gradient {
-  background: linear-gradient(120deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
 /* Focus terlihat untuk semua kontrol interaktif */
 :focus-visible {
   outline: 2px solid var(--ring);
   outline-offset: 2px;
+}
+
+/* ============================================================
+   Browser surfaces — scrollbar, caret, angka tabular
+   ============================================================ */
+* {
+  caret-color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  border: 2px solid var(--background);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   BOLD + KINETIC — aurora background
+   ============================================================ */
+.aurora-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.45;
+  will-change: transform;
+}
+.dark .aurora-blob {
+  opacity: 0.35;
+}
+.aurora-blob-1 {
+  width: 44vw;
+  height: 44vw;
+  top: -12vw;
+  left: -8vw;
+  background: var(--primary);
+  animation: drift-1 26s ease-in-out infinite alternate;
+}
+.aurora-blob-2 {
+  width: 34vw;
+  height: 34vw;
+  top: 30vh;
+  right: -10vw;
+  background: var(--accent);
+  opacity: 0.25;
+  animation: drift-2 32s ease-in-out infinite alternate;
+}
+.aurora-blob-3 {
+  width: 30vw;
+  height: 30vw;
+  bottom: -8vw;
+  left: 30vw;
+  background: var(--primary);
+  opacity: 0.22;
+  animation: drift-3 38s ease-in-out infinite alternate;
+}
+@keyframes drift-1 {
+  to {
+    transform: translate(10vw, 8vh) scale(1.15);
+  }
+}
+@keyframes drift-2 {
+  to {
+    transform: translate(-12vw, -6vh) scale(0.9);
+  }
+}
+@keyframes drift-3 {
+  to {
+    transform: translate(6vw, -10vh) scale(1.1);
+  }
+}
+
+/* ============================================================
+   Cursor glow — titik cahaya mengikuti kursor
+   ============================================================ */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 480px;
+  height: 480px;
+  margin: -240px 0 0 -240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--primary) 22%, transparent) 0%, transparent 65%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  will-change: transform;
+}
+
+/* ============================================================
+   Glow saat hover kartu — cahaya gradien dua arah + kedalaman
+   ============================================================ */
+.glow-border {
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.25s ease;
+}
+.glow-border:hover,
+.glow-border:focus-visible {
+  border-color: color-mix(in srgb, var(--primary) 50%, transparent);
+  box-shadow:
+    -8px -8px 30px -14px color-mix(in srgb, var(--primary) 85%, transparent),
+    8px 8px 30px -14px color-mix(in srgb, var(--accent) 75%, transparent),
+    0 18px 40px -18px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================================
+   Kinetic headline — stagger kata
+   ============================================================ */
+.kinetic-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em) rotate(2deg);
+  animation: word-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes word-in {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* ============================================================
+   Marquee — strip teknologi
+   ============================================================ */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ============================================================
+   Magnetic button — transisi lembut
+   ============================================================ */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
 /* Modal enter */

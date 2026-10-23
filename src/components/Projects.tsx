@@ -24,8 +24,6 @@ export default function Projects() {
     <section id="proyek" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          id="proyek-heading"
-          eyebrow="Karya"
           title="Proyek Pilihan"
           description="Klik kartu untuk detail lengkap, teknologi, dan link terkait."
         />
@@ -50,12 +48,16 @@ export default function Projects() {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((p, i) => (
-            <Reveal key={p.title} delay={(i % 3) * 70}>
+            <Reveal
+              key={p.title}
+              delay={(i % 3) * 70}
+              className={filtered.length === 1 ? 'mx-auto w-full max-w-lg col-span-full' : ''}
+            >
               <button
                 type="button"
                 onClick={() => setSelected(p)}
                 aria-label={`Lihat detail proyek ${p.title}`}
-                className="lift glass group flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-2xl text-left"
+                className="lift glass glow-border group flex h-full w-full cursor-pointer flex-col overflow-hidden rounded-2xl text-left"
               >
                 <div className="relative aspect-video overflow-hidden bg-muted">
                   {/* ✏️ EDIT: timpa file gambar di public/images/ (project-1.svg dst) */}

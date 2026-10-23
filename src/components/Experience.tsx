@@ -15,8 +15,8 @@ export default function Experience() {
     <section id="pengalaman" className="py-20 sm:py-24">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading
-          id="pengalaman-heading"
-          eyebrow="Perjalanan"
+
+
           title="Pengalaman & Pendidikan"
           description="Riwayat singkat karier, studi, dan organisasi."
         />
@@ -35,7 +35,7 @@ export default function Experience() {
                     <Icon size={16} className={meta.color} />
                   </span>
 
-                  <article className="lift glass rounded-2xl p-5 sm:p-6">
+                  <article className="lift glass glow-border rounded-2xl p-5 sm:p-6">
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
                         <h3 className="text-lg font-bold">{exp.title}</h3>

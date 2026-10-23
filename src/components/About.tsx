@@ -20,8 +20,8 @@ export default function About() {
     <section id="tentang" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          id="tentang-heading"
-          eyebrow="Tentang Saya"
+
+
           title="Siapa Saya"
           description="Ringkasan perjalanan, minat, dan angka penting di balik karya saya."
         />
@@ -35,7 +35,7 @@ export default function About() {
         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 80}>
-              <div className="lift glass flex flex-col items-center rounded-2xl p-6 text-center">
+              <div className="lift glass glow-border flex flex-col items-center rounded-2xl p-6 text-center">
                 <s.icon size={28} className="mb-3 text-primary" aria-hidden="true" />
                 <span className="text-3xl font-extrabold">{s.value}</span>
                 <span className="mt-1 text-sm text-muted-foreground">{s.label}</span>

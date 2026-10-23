@@ -23,8 +23,8 @@ export default function Certificates() {
     <section id="sertifikat" className="py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading
-          id="sertifikat-heading"
-          eyebrow="Pencapaian"
+
+
           title="Sertifikat"
           description="Klik kartu untuk melihat pratinjau sertifikat lebih besar."
         />
@@ -54,7 +54,7 @@ export default function Certificates() {
                 type="button"
                 onClick={() => setSelected(cert)}
                 aria-label={`Lihat sertifikat ${cert.name}`}
-                className="lift glass group block h-full w-full cursor-pointer rounded-2xl overflow-hidden text-left"
+                className="lift glass glow-border group block h-full w-full cursor-pointer rounded-2xl overflow-hidden text-left"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                   {/* ✏️ EDIT: timpa file gambar di public/images/ (cert-1.svg dst) */}

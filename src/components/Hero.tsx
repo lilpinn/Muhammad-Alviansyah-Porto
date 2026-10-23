@@ -2,6 +2,7 @@
 
 import { Download, Mail, MapPin } from 'lucide-react';
 import { SocialIcon } from '@/components/BrandIcons';
+import Magnetic from '@/components/Magnetic';
 import Reveal from '@/components/Reveal';
 import { useTyping } from '@/hooks/useTyping';
 import { profile } from '@/data/portfolio';
@@ -20,32 +21,44 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
         <Reveal>
           <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-            👋 Halo, saya
+            Halo, saya
           </p>
-          <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-            {profile.name}
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
+            {profile.name.split(' ').map((word, i) => (
+              <span
+                key={word}
+                className="kinetic-word mr-3"
+                style={{ animationDelay: `${120 + i * 110}ms` }}
+              >
+                {word}
+              </span>
+            ))}
           </h1>
           <p className="mt-4 min-h-9 text-xl font-semibold sm:text-2xl">
             Saya{' '}
-            <span className="text-gradient caret pr-1">{typed}</span>
+            <span className="caret pr-1 text-primary">{typed}</span>
           </p>
           <p className="mt-4 max-w-xl text-muted-foreground">{profile.bio}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#kontak"
-              className="cursor-pointer rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
-            >
-              Hubungi Saya
-            </a>
-            <a
-              href={asset(profile.resumeUrl)}
-              download
-              className="flex cursor-pointer items-center gap-2 rounded-xl border border-border px-6 py-3 font-semibold transition-colors hover:border-primary hover:text-primary"
-            >
-              <Download size={18} />
-              {profile.resumeLabel}
-            </a>
+            <Magnetic>
+              <a
+                href="#kontak"
+                className="cursor-pointer rounded-xl bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/35"
+              >
+                Hubungi Saya
+              </a>
+            </Magnetic>
+            <Magnetic>
+              <a
+                href={asset(profile.resumeUrl)}
+                download
+                className="flex cursor-pointer items-center gap-2 rounded-xl border border-border px-6 py-3 font-semibold transition-colors hover:border-primary hover:text-primary"
+              >
+                <Download size={18} />
+                {profile.resumeLabel}
+              </a>
+            </Magnetic>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
