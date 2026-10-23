@@ -32,7 +32,7 @@ export const profile: Profile = {
     "Saya juga memiliki ketertarikan pada keamanan aplikasi, penetration testing, dan riset kerentanan untuk memahami cara kerja sistem serta mengidentifikasi potensi celah keamanan. Saya terus mengembangkan kemampuan teknis dan mempelajari teknologi baru untuk menghasilkan solusi digital yang efektif, efisien, dan andal. " +
     " Saya suka belajar teknologi baru dan " +
     "berkontribusi pada proyek open source.", // ✏️ EDIT: Path foto di folder public/ (timpa file-nya dengan foto kamu, nama sama)
-  photo: "/images/profile.svg",
+  photo: "/images/profile.jpg",
   // ✏️ EDIT: Email yang tampil & form contact
   email: "muhammadalviansyah22@gmail.com",
   // ✏️ EDIT: Nomor HP ("" = disembunyikan)
